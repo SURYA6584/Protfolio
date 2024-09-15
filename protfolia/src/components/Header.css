@@ -1,0 +1,293 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  background: linear-gradient(270deg, #ff5f6d, #ffc371);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite; /* Smooth gradient animation */
+  height: 100vh;
+  width: 100%;
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+/* General styles */
+body {
+  background-color: black;
+  color: white;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.pf_logo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: rgb(241, 239, 244);
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%; /* Responsive width */
+  text-align: center;
+  z-index: 1001;
+}
+
+.modal-content label {
+  display: block;
+  margin: 10px 0;
+  color: #000000;
+  font-style: italic;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 5px;
+  height: 50px;
+  margin-top: 5px;
+  background-color: rgb(140, 137, 137);
+  color: #000000;
+  font-size: x-large;
+}
+
+.modal-content button {
+  margin: 10px;
+  padding: 20px;
+  height: 60px;
+  background-color: rgb(59, 127, 179);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 30px;
+}
+
+.logo-menu-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.menu_container {
+  display: none;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.Nav {
+  margin-left: 220px;
+  display: flex;
+  gap: 50px;
+  color: aliceblue;
+  transition: max-height 0.3s ease;
+}
+
+.Nav a {
+  color: aliceblue;
+}
+
+.Nav_media {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #000000;
+  padding: 20px 0;
+  z-index: 1000;
+}
+
+.Nav_media a, .Nav_media button {
+  padding: 10px 20px;
+  width: 100%;
+  color: aliceblue;
+}
+
+.hireme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aea3a3;
+  cursor: pointer;
+  position: relative;
+  margin-left: 10px;
+}
+
+.hireme-icon {
+  font-size: 20px;
+  margin-left: 10px;
+  color: rgb(227, 16, 242);
+}
+
+.hireme:hover .hireme-icon {
+  font-size: 30px;
+  transition: font-size 0.2s ease;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.social-icon {
+  color: #333;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #0073b1;
+}
+
+/* Card container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to the next line */
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center the cards in the container */
+  padding: 20px;
+}
+
+.card {
+  width: calc(33.33% - 20px); /* Adjust card width for three cards per row */
+  max-height: 300px; /* Set a maximum height for the card */
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden; /* Hide overflow content */
+}
+
+/* Responsive styles for screens less than 700px */
+@media (max-width: 700px) {
+  .Nav {
+      display: none; /* Hide nav on small screens */
+  }
+
+  .Nav_media {
+      display: flex; /* Display nav when menu is toggled */
+  }
+
+  .logo-menu-container {
+      display: flex; /* Ensure logo and menu container are displayed */
+      justify-content: space-between; /* Space between logo and menu icon */
+      flex: 1; /* Take up remaining space */
+  }
+
+  .pf_logo {
+      display: none; /* Hide logo on small screens */
+  }
+
+  .menu_container {
+      display: flex; /* Show menu icon on small screens */
+      position: absolute; /* Absolute positioning */
+      left: 20px; /* Adjust this value to fit your design */
+      top: 10px; /* Align with header */
+      font-size: 40px;
+  }
+
+  .modal-content {
+      width: 70%; /* Make modal width responsive */
+      padding: 15px; /* Reduce padding */
+      height: 45%;
+      margin-bottom: 10px;
+  }
+
+  .modal-content label {
+      font-size: large; /* Adjust label font size */
+  }
+
+  .modal-content input {
+      height: 40px; /* Reduce input height */
+      font-size: medium; /* Adjust input font size */
+  }
+
+  .modal-content button {
+      padding: 10px; /* Adjust button padding */
+      height: 50px; /* Reduce button height */
+      font-size: medium; /* Adjust button font size */
+  }
+
+  .social-links {
+      display: flex;
+      gap: 10px;
+      margin-left: 50px; /* Adjust spacing between logo and icons */
+  }
+
+  .social-icon {
+      color: #8532b1;
+      font-size: 20px;
+      transition: color 0.3s;
+  }
+
+  .social-icon:hover {
+      color: #0073b1; /* Change color on hover */
+  }
+
+  /* Card styles for small screens */
+  .card {
+      width: 50%; /* Adjust card width to fit three cards in one row */
+      margin: 5px; /* Add a small margin around the cards */
+      padding: 10px; /* Adjust padding inside the card */
+      box-sizing: border-box; /* Include padding and border in width calculation */
+  }
+
+  .card-content {
+      font-size: small; /* Reduce font size for content */
+      line-height: 1.2; /* Adjust line height for better content fit */
+  
+  
+    }
+}

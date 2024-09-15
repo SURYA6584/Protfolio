@@ -1,0 +1,127 @@
+.hello_name {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    font-weight: 400;
+    font-size: smaller;
+    margin-bottom: 70px;
+}
+
+.name {
+    color: green;
+}
+
+.role {
+    font-weight: bold; /* Optional: Make the text bold */
+    background: linear-gradient(to right, rgb(75, 9, 133), rgb(145, 69, 189)); /* Gradient from dark to lighter */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    -moz-background-clip: text;
+    background-clip: text; /* Standard background clip property */
+    color: transparent; /* Make the text color transparent to show the gradient */
+    font-size: x-large;
+}
+.role {
+    font-size: x-large; /* Adjust size as needed */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    overflow: hidden; /* Ensures content overflows are hidden */
+    border-right: 2px solid; /* Adds a blinking caret effect */
+    width: 15ch; /* Set the width to fit the text */
+    animation: typing 4s steps(20, end) infinite, blink-caret 2s step-end infinite ; /* Combine animations */
+}
+
+/* Typing effect animation */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 15ch; /* Text fully visible */
+    }
+    70% {
+        width: 60ch; /* Pause with full text */
+    }
+    100% {
+        width: 0; /* Text hidden */
+    }
+}
+
+/* Blinking caret animation */
+@keyframes blink-caret {
+    50%, 50% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black /* Caret color */
+    }
+}
+
+.home {
+    margin-left: 8%;
+    margin-top: 5%;
+}
+
+.resume {
+    color: white;
+    padding: 10px; /* Optional: Add some padding */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin-top: 40px;
+    font-size: large;
+    width: 100px;
+    margin-left: 5px;
+}
+
+.email {
+    margin-top: 40px;
+    margin-left: 100px;
+    color: white;
+    background-color: rgba(89, 87, 87, 0.3); /* White transparent background */
+    border: none; /* Remove border for button */
+    padding: 12px; /* Optional: Add some padding */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    width: 120px; /* Set the desired width */
+    text-align: center; /* Center the text inside the span */
+    display: inline-block; /* Allow width to be set */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+
+}
+
+/* Hover Effects */
+.resume:hover, .email:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Slightly less transparent on hover */
+    color: rgb(206, 193, 193); /* Change text color on hover for better contrast */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 700px) {
+    .hello_name {
+        display: flex;
+        justify-content: flex-start;
+        gap: 5px;
+        font-size: smaller;
+        font-weight: 200;
+    }
+    
+
+    .role {
+        font-weight: bold;
+        background: linear-gradient(to right, rgb(75, 9, 133), rgb(145, 69, 189));
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: small;
+    }
+
+     .email {
+        margin-left: 20px; /* Adjust margin for smaller screens */
+        margin-top: 20px; /* Reduce margin-top */
+        width: 100px; /* Reduce width for smaller screens */
+        font-size: medium; /* Adjust font size */
+        background-color: rgb(35, 33, 33);
+       
+    }
+  
+
+}

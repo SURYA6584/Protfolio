@@ -1,0 +1,106 @@
+/* Achievements Section */
+#achievements {
+  padding: 50px 0;
+  background-color: #000000; /* Black background */
+}
+
+.section-title {
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 2em;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.achievements-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  padding-bottom: 50px;
+}
+
+.achievement-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px);
+}
+
+.achievement-icon {
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.achievement-content {
+  flex: 1;
+}
+
+.achievement-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.achievement-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.achievement-date {
+  font-size: 14px;
+  color: #999;
+}
+
+/* Media query for screens smaller than 700px */
+@media (max-width: 700px) {
+  .achievements-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 5px; /* Reduce gap for smaller screens */
+  }
+  .section-title {
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff9f9;
+    margin-left: 25px;
+
+  }
+  .achievement-card {
+    padding: 5px; /* Reduce padding for smaller screens */
+    font-size: 4px; /* Smaller font size */
+    
+  }
+
+  .achievement-icon {
+    font-size: 20px; /* Smaller icons */
+    margin-right: 5px;
+  }
+
+  .achievement-title {
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .achievement-description {
+    font-size: 10px;
+    font-weight: 800;
+
+  }
+
+  .achievement-date {
+    font-size: 10px;
+    font-weight: 1000;
+
+  }
+ 
+}

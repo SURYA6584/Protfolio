@@ -1,0 +1,88 @@
+/* General Styling */
+.education {
+    background-color: #000000;
+    text-align: center;
+    padding: 50px 10px; /* Provide enough padding to separate from the home section */
+}
+
+.education-heading {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    margin-left: -900px;
+}
+
+.horizontal-timeline {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    min-height: 150px;
+    margin-top: 100px;
+}
+
+.timeline-marker {
+    position: relative;
+    cursor: pointer;
+}
+
+.marker-icon {
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    z-index: 1;
+}
+
+/* Styling the card */
+.card {
+    position: absolute;
+    bottom: -10px;
+    transform: translateX(-20%);
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+}
+
+/* Show the card on hover */
+.timeline-marker:hover .card {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 700px) {
+    .horizontal-timeline {
+        flex-direction: row;
+        padding: 10px;
+       margin-top: 0px;
+         margin-bottom: -80px;
+    }
+
+    .education-heading {
+        color: #ffffff;
+       font-size: 20px;
+       margin-left: -300px;
+    }
+
+    .timeline-marker {
+        margin: 0px 50px;
+    }
+
+    .marker-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card {
+        top: -150px;
+        width: 150px;
+    }
+}

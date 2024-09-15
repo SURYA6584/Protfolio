@@ -1,0 +1,128 @@
+.project_container {
+  padding: 20px;
+}
+
+.heading {
+  color: #f8f8f8;
+  margin-bottom: 10px;
+  font-size: 2em;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px;
+  background-color: black;
+}
+
+.project-slide {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #000000;
+  padding: 10px;
+  box-shadow: 0px 2px 30px 1px rgb(82, 216, 221);
+  width: 300px;
+  height: 450px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5%;
+  margin: 10px; /* Added margin to create space between cards */
+  box-sizing: border-box; /* Ensures padding is included in the width and height */
+}
+
+.project-slide:hover {
+  border: 1px solid #160909;
+  box-shadow: 0px 2px 30px 1px rgb(99, 176, 196);
+ 
+}
+
+.project-slide img {
+  width: 100%;
+  height: 70%;
+  transition: all 0.3s ease;
+  background-color: white;
+  border-radius: 5%;
+}
+
+.project-details {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  color: black;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 5%;
+  box-sizing: border-box; /* Ensures padding is included in the width and height */
+  overflow: hidden; /* Prevents overflow of content */
+}
+
+.project-details h3 {
+  margin: 0;
+  font-size: 1em;
+  word-wrap: break-word; /* Ensures text wraps inside the card */
+}
+
+.project-details p {
+  margin: 5px 0 0;
+  font-size: 0.8em;
+  word-wrap: break-word; /* Ensures text wraps inside the card */
+}
+/* Responsive styles for screens less than 700px */
+@media (max-width: 700px) {
+  .heading {
+    font-size: 1.4em;
+    margin-left: 10px; /* Reset margin-left to avoid shifting */
+    margin-bottom: 10px; /* Reduced space below heading */
+  }
+
+  .project_container {
+    margin-top: -600px; /* Reset margin-top to avoid excessive spacing */
+    margin-bottom: 20px; /* Space below the container */
+  }
+
+  .project-gallery {
+    padding: 10px;
+    gap: 10px;
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap; /* Ensure wrapping of cards */
+    justify-content: space-between; /* Space out cards more evenly */
+    margin-top: 0; /* Remove extra space at the top */
+  }
+
+  .project-slide {
+    width: 100%;
+    height: 400px; /* Adjust height based on content */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-bottom: 10px; /* Space between rows */
+    border: 1px solid #ddd; /* Add a border to improve visibility */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Ensure content doesn’t overflow */
+  }
+
+  .project-slide img {
+    width: 100%; /* Ensure image takes up the full width of the card */
+    height: 70%; /* Maintain aspect ratio */
+    display: block; /* Ensure image is visible */
+  }
+
+  .project-details {
+    position: relative; /* Adjust position to fit content */
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.8); /* Slightly opaque background for readability */
+  }
+
+  .project-details h3 {
+    font-size: 1em;
+    margin: 0; /* Remove default margin */
+  }
+
+  .project-details p {
+    font-size: 0.8em;
+    margin-top: 5px; /* Space above description text */
+  }
+}

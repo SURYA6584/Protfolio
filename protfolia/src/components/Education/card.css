@@ -1,0 +1,137 @@
+
+
+
+.timeline-marker {
+    position: relative;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+
+
+/* Updated marker-details styles */
+.marker-details {
+    position: absolute;
+    top: 100px; /* Adjust based on marker position */
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 250px; /* Adjust width if needed */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+/* Show marker-details on hover */
+.timeline-marker:hover .marker-details {
+    opacity: 1; /* Make visible on hover */
+    visibility: visible; /* Make visible on hover */
+}
+
+.card {
+    background-color: #1f1e1e;
+    overflow: hidden;
+    text-align: center;
+    width: 250px; /* Adjust width for better visibility */
+    height: 300px; /* Adjust height based on content */
+    transition: transform 0.3s ease;
+    margin-top: 10px; /* Slight margin for better visual separation */
+    box-shadow: 0px -2px 25px 0px  rgb(116, 114, 114);
+    border: 2px solid rgb(81, 79, 79);
+
+}
+
+.card:hover {
+    transform: translateX(10px); /* Slight lift on hover */
+}
+
+.card-image {
+    width: 100%;
+    height: 120px; /* Adjusted height for better visibility */
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 5px;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 1.2em;
+    color: #bb0e16;
+    
+}
+
+.card-collage {
+    color: #cccf14;
+    font-size: 1em; /* Adjust font size as needed */
+    word-wrap: break-word; /* Break long words */
+    font-size: large;
+    font-style: italic;
+    overflow-wrap: break-word; /* Ensure wrapping for long words */
+    white-space: normal; /* Ensure that text wraps onto the next line */
+    margin: 5px 0;
+    text-align: center; /* Optional: Align text in the center */
+    width: 100%; /* Make sure the element takes full width of the parent container */
+}
+
+
+.card-aggregate {
+    margin: 5px 0;
+    color: #cccf14;
+    font-style: italic;
+
+}
+
+.card-link {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 700px) {
+  
+
+    .timeline-marker {
+        margin: 10px 0; /* Adjusted margin for vertical alignment */
+    }
+
+    .marker-icon {
+        width: 60px; /* Reduced size for smaller screens */
+        height: 60px; /* Reduced size for smaller screens */
+    }
+
+    .marker-details {
+        top: 40px; /* Adjusted for smaller screens */
+        font-size: 0.9em; /* Slightly smaller text for better fit */
+        width: 100px; /* Adjust width to fit smaller screens */
+    }
+
+    .card {
+        width: 120px; /* Smaller width for better alignment on small screens */
+        margin: 10px 0; /* Ensure separation between cards */
+        height: 300px;
+    }
+
+    .card-title {
+        font-size: 1em; /* Smaller font size for titles */
+    }
+
+    .card-collage {
+        font-size: 0.9em; /* Adjusted font size */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+
+    }
+
+    .card-aggregate {
+        font-size: 0.9em; /* Adjusted font size */
+    }
+}
